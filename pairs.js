@@ -40,8 +40,9 @@ function pairs(names) {
   // Your code goes here
 }
 
+console.log("hi");
 module.exports = pairs;
 
-console.log(
-  pairs(["Asis", "Hamsa", "Fawas", "Mishmish", "Hussein", "Lailz", "Mr Potato"])
-);
+//console.log(
+//  pairs(["Asis", "Hamsa", "Fawas", "Mishmish", "Hussein", "Lailz", "Mr Potato"])
+//);
