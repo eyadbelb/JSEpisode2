@@ -37,12 +37,22 @@ Array.prototype.getRandom = function () {
 };
 
 function pairs(names) {
-  // Your code goes here
+  if (names === [] || !names) return [];
+  let newPairs = [];
+
+  let i = 0;
+  while (i < parseInt(names.length / 2))
+    newPairs.push([names.getRandom(), names.getRandom()]);
+  if (!Number.isInteger(names.length / 2)) newPairs.push([names.getRandom()]);
+
+  while (i < Math.round(names.length / 2))
+    newPairs.push([names.getRandom(), names.getRandom()]);
+
+  return newPairs;
 }
 
-console.log("hi");
 module.exports = pairs;
 
-//console.log(
-//  pairs(["Asis", "Hamsa", "Fawas", "Mishmish", "Hussein", "Lailz", "Mr Potato"])
-//);
+console.log(
+  pairs(["Asis", "Hamsa", "Fawas", "Mishmish", "Hussein", "Lailz", "Mr Potato"])
+);
